@@ -1000,9 +1000,9 @@
                     Mengirim...
                   </button>
                 </div>
-                <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+                <div id="popUp-notif-success" class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
                 <strong>Hore! </strong>Pendaftaran Coba Gratis Anda sudah terkirim, nantikan konfirmasi dari kami ya.
-                <button type="button" id="close-btn" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <button type="button" id="close-btn" class="btn-close" aria-label="Close"></button>
               </div>
               </form>
             </div>
@@ -1215,12 +1215,13 @@
           })
           .catch((error) => console.error("Error!", error.message));
       });
+
     </script>
     
-    <script>
+<script>
 	// Attach event listener to first close popup and then refresh page
 	document.getElementById('close-btn').addEventListener('click', (e) => {
-		window.location.reload();
+    document.querySelector('#popUp-notif-success').classList.add('d-none');
 	});
 </script>
     
