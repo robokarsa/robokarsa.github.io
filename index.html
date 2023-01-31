@@ -962,36 +962,73 @@
           </div>
           <div class="row justify-content-center mb-4">
             <div class="col-md-9">
-              <form name="coba-gratis-form">
+              <form class="row g-3 needs-validation" name="beli-kelas-form" novalidate>
+                <h3><strong>Informasi Siswa</strong></h3>
                 <div class="mb-3">
-                  <label for="name" class="form-label">Nama Lengkap Anak</label>
-                  <input name="namaLengkapAnak" type="text" class="form-control" id="namaLengkapAnak" aria-describedby="namaLengkapAnak" placeholder="Silahkan isikan nama lengkap anak" />
+                  <label for="validationCustom01" class="form-label">Nama Lengkap</label>
+                  <input name="namaLengkapAnak" type="text" class="form-control" placeholder="Silahkan isikan nama lengkap anak" required />
+                  <div class="valid-feedback">Namanya bagus.</div>
+                  <div class="invalid-feedback">Tolong diisi.</div>
                 </div>
                 <div class="mb-3">
-                  <label for="name" class="form-label">Nama Panggilan Anak</label>
-                  <input name="namaPanggilanAnak" type="text" class="form-control" id="namaPanggilanAnak" aria-describedby="namaPanggilanAnak" placeholder="Dengan siapa kami harus memanggilnya?." />
+                  <label for="validationCustom01" class="form-label">Nama Panggilan</label>
+                  <input name="namaPanggilanAnak" type="text" class="form-control" placeholder="Kami harus memanggilnya siapa?" required />
+                  <div class="valid-feedback">Baik, kami akan memanggilnya dengan nama itu.</div>
+                  <div class="invalid-feedback">Tolong diisi.</div>
                 </div>
                 <div class="mb-3">
-                  <label for="name" class="form-label">Asal Sekolah Anak</label>
-                  <input name="asalSekolahAnak" type="text" class="form-control" id="asalSekolahAnak" aria-describedby="asalSekolahAnak" placeholder="Dimana anak Anda bersekolah saat ini?" />
+                  <label for="validationCustom01" class="form-label">Jenis Kelamin</label>
+                  <input name="jenisKelamin" type="text" class="form-control" placeholder="Laki/Perempuan?" required />
+                  <div class="valid-feedback">Oke, sudah kami catat.</div>
+                  <div class="invalid-feedback">Tolong diisi.</div>
                 </div>
                 <div class="mb-3">
-                  <label for="number" class="form-label">Kelas</label>
-                  <input name="kelas" type="number" class="form-control" id="kelas" aria-describedby="kelas" placeholder="Saat ini kelas berapa?" />
+                  <label for="validationCustom02" class="form-label">Usia Anak</label>
+                  <input name="usiaAnak" type="text" class="form-control" placeholder="Usia sang anak saat ini berapa tahun?" required />
+                  <div class="valid-feedback">Baik, sudah kami catat.</div>
+                  <div class="invalid-feedback">Tolong diisi.</div>
                 </div>
                 <div class="mb-3">
-                  <label for="number" class="form-label">Usia Anak</label>
-                  <input name="usiaAnak" type="number" class="form-control" id="usiaAnak" aria-describedby="usiaAnak" placeholder="Berapa usia anak Anda saat ini?" />
+                  <label for="validationCustom02" class="form-label">Asal Sekolah</label>
+                  <input name="asalSekolahAnak" type="text" class="form-control" placeholder="Saat ini anak bersekolah dimana?" required />
+                  <div class="valid-feedback">Baik, sudah kami catat.</div>
+                  <div class="invalid-feedback">Tolong diisi.</div>
                 </div>
                 <div class="mb-3">
-                  <label for="name" class="form-label">Masukkan hari dan waktu kelas <strong>Coba Gratis</strong> yang diinginkan</label>
-                  <input name="trialDate" type="text" class="form-control" id="trialDate" aria-describedby="trialDate" placeholder="Contoh: Senin, 7 Februari 2023 16.00" />
-                  <div id="trial-date" class="form-text">Pilihan yang tersedia: <strong>Senin-Kamis:</strong> 16.00-17.30 <strong>Jumat-Sabtu:</strong> 14.00-17.30 <strong>Minggu:</strong> 10.00-17.30.</div>
+                  <label for="validationCustom02" class="form-label">Kelas</label>
+                  <input name="kelas" type="text" class="form-control" placeholder="Saat ini anak kelas berapa?" required />
+                  <div class="valid-feedback">Baik, sudah kami catat.</div>
+                  <div class="invalid-feedback">Tolong diisi.</div>
                 </div>
                 <div class="mb-3">
-                  <label for="number" class="form-label">Nomor kontak WhatsApp Orangtua/Wali</label>
-                  <input name="kontakWA" type="tel" class="form-control" id="kontakWA" aria-describedby="kontakWA" placeholder="Pastikan nomor sudah benar." />
-                  <div id="WANumberHelp" class="form-text">Pastikan agar mengisi nomor kontak WA yang aktif agar kami dapat menghubungi Anda untuk mengkonfirmasi ketersediaan kelas yang diinginkan. Kami akan mengkonfirmasi Anda kembali dalam waktu 5 jam setelah Anda mendaftar. Apabila dalam rentang waktu tersebut belum mendapatkan pesan konfirmasi, silahkan kontak langsung melalui Direct Message Instagram @robokarsa.id</div>
+                  <label for="validationCustom03" class="form-label">Akun Instagram Anak</label>
+                  <input name="sosmedAnak" type="text" class="form-control" placeholder="Contoh: robokarsa.id" />
+                  <div id="SosmedHelp" class="form-text">
+                    Anak tidak harus sudah memiliki akun Instagram ketika mendaftar. Boleh diisi dengan akun sosial media Orangtua atau dikosongkan jika anak belum memiliki Sosial Media atau Parents tidak ingin membagikan Sosial Media Anak.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="validationCustom02" class="form-label fs-5">Masukkan hari dan waktu kelas <strong>Coba Gratis</strong> yang diinginkan</label>
+                  <input name="routineDate" name="routineDate" type="text" class="form-control" aria-describedby="trialDate" placeholder="Contoh: Senin, 7 Februari 2023 16.00" required />
+                  <div class="valid-feedback">Baik, kami sudah mencatatnya.</div>
+                  <div class="invalid-feedback">Tolong diisi.</div>
+                  <div class="form-text">Pilihan yang tersedia: Senin-Kamis: 16.00-17.30 Jumat-Sabtu: 14.00-17.30 Minggu: 10.00-17.30.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="validationCustom02" class="form-label fs-5">Nomor kontak WhatsApp Orangtua/Wali</label>
+                  <input name="kontakWA" name="kontakWA" type="tel" class="form-control" id="validationCustom02" aria-describedby="kontakWA" placeholder="Pastikan nomor sudah benar." required />
+                  <div class="valid-feedback">Baik, kami sudah mencatatnya.</div>
+                  <div class="invalid-feedback">Tolong diisi.</div>
+                  <div id="WANumberHelp" class="form-text">
+                    Pastikan agar mengisi nomor kontak WA yang aktif agar kami dapat menghubungi Anda untuk mengkonfirmasi ketersediaan kelas yang diinginkan. Kami akan mengkonfirmasi Anda kembali dalam waktu 5 jam setelah Anda mendaftar.
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
+                    <label class="form-check-label" for="invalidCheck"> Saya memastikan data yang dimasukkan sudah benar. </label>
+                    <div class="invalid-feedback">Tolong diperiksa kembali demi kelancaran keperluan administrasi.</div>
+                  </div>
                 </div>
                 <div class="d-grid gap-2 col-3 mx-auto">
                   <button type="submit" class="btn btn-primary btn-kirim">Kirim</button>
@@ -999,16 +1036,14 @@
                     <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                     Mengirim...
                   </button>
+                  <div id="notif" class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+                    <strong>Baik! </strong>Form pendaftaran Coba Gratis Anda sudah terkirim, mohon nantikan konfirmasi dari kami melalui WhatsApp.
+                    <button type="button" id="close-btn" class="btn-close" aria-label="Close"></button>
+                  </div>
                 </div>
-                <div id="popUp-notif-success" class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
-                <strong>Hore! </strong>Pendaftaran Coba Gratis Anda sudah terkirim, nantikan konfirmasi dari kami ya.
-                <button type="button" id="close-btn" class="btn-close" aria-label="Close"></button>
-              </div>
               </form>
             </div>
           </div>
-
-          <!-- End Reservation Form -->
         </div>
       </section>
       <!-- End Book A Table Section -->
@@ -1193,37 +1228,60 @@
     <script src="assets/js/main.js"></script>
 
     <!-- For Coba Gratis Forms -->
-    <script>
-      const scriptURL = "https://script.google.com/macros/s/AKfycbw-F9SUdQs067rBJi-EaTCQZ-vE93JY6MVjUfpK1zK_KUwlNQmx0185f01drVc9mXFu3g/exec";
-      const form = document.forms["coba-gratis-form"];
-      const btnKirim=document.querySelector('.btn-kirim');
-      const btnLoading=document.querySelector('.btn-loading');
-      const myAlert=document.querySelector('.my-alert');
-      myAlert.style.marginTop = 'var(--bs-alert-margin-bottom)';
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        btnLoading.classList.toggle('d-none');
-        btnKirim.classList.toggle('d-none');
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => {
-            btnLoading.classList.toggle('d-none');
-            btnKirim.classList.toggle('d-none');
-            myAlert.classList.toggle('d-none');
-            form.reset();
-            console.log("Success!", response)
-          })
-          .catch((error) => console.error("Error!", error.message));
-      });
-
-    </script>
-    
 <script>
-	// Attach event listener to first close popup and then refresh page
-	document.getElementById('close-btn').addEventListener('click', (e) => {
-    document.querySelector('#popUp-notif-success').classList.add('d-none');
-	});
-</script>
-    
+      // Attach event listener to first close popup and then refresh page
+      document.getElementById("close-btn").addEventListener("click", (e) => {
+        document.querySelector(".my-alert").classList.add("d-none");
+      });
+    </script>
+
+    <script>
+      (function () {
+        "use strict";
+
+        const scriptURL = "https://script.google.com/macros/s/AKfycbw-F9SUdQs067rBJi-EaTCQZ-vE93JY6MVjUfpK1zK_KUwlNQmx0185f01drVc9mXFu3g/exec";
+        const form = document.forms["beli-kelas-form"];
+        const btnKirim = document.querySelector(".btn-kirim");
+        const btnLoading = document.querySelector(".btn-loading");
+        const myAlert = document.querySelector(".my-alert");
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll(".needs-validation");
+        var notifClosed = document.getElementById("notif");
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener(
+            "submit",
+            function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+                form.classList.add("was-validated");
+              } else if (!notifClosed.classList.contains("d-none")) {
+                event.preventDefault();
+                event.stopPropagation();
+              } else if (form.checkValidity && notifClosed.classList.contains("d-none")) {
+                event.preventDefault();
+                btnLoading.classList.toggle("d-none");
+                btnKirim.classList.toggle("d-none");
+                fetch(scriptURL, { method: "POST", body: new FormData(form) })
+                  .then((response) => {
+                    btnLoading.classList.toggle("d-none");
+                    btnKirim.classList.toggle("d-none");
+                    myAlert.classList.toggle("d-none");
+                    form.reset();
+                    console.log("Success!", response);
+                    form.classList.remove("was-validated");
+                  })
+                  .catch((error) => console.error("Error!", error.message));
+              }
+            },
+            false
+          );
+        });
+      })();
+    </script>
+	  
   </body>
 </html>
